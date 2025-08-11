@@ -1,0 +1,1 @@
+placeholder poster handled via inline style
