@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { NavLink, Outlet, Link, useLocation, useParams, Routes, Route } from 'react-router-dom';
+import { NavLink, Outlet, Link, useLocation, useParams } from 'react-router-dom';
 import { getMovieDetails, withImage } from '../../services/api';
-import MovieCast from '../../components/MovieCast/MovieCast.jsx';
-import MovieReviews from '../../components/MovieReviews/MovieReviews.jsx';
 import styles from './MovieDetailsPage.module.css';
 
 export default function MovieDetailsPage() {
@@ -66,11 +64,6 @@ export default function MovieDetailsPage() {
         </ul>
       </div>
 
-      {/* Nested routes rendered here */}
-      <Routes>
-        <Route path="cast" element={<MovieCast />} />
-        <Route path="reviews" element={<MovieReviews />} />
-      </Routes>
       <Outlet />
     </div>
   );
